@@ -1,6 +1,6 @@
 package operaciones;
 
-public class Suma {
+public class Operacion {
     public int operar(int a, int b){
         return a+b;
     }

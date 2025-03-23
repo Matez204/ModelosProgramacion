@@ -1,6 +1,6 @@
 package operaciones;
 
-public class Producto extends Suma{
+public class Producto extends Operacion {
     public int operar(int a, int b){
         int resultado = 0;
         for(int i = 1; i <= b; i++){
