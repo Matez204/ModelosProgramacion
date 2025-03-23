@@ -1,4 +1,6 @@
 package figuritas;
+
+import operaciones.Operacion;
 import operaciones.Producto;
 
 public class Rectangulo extends Figura{
@@ -11,6 +13,7 @@ public class Rectangulo extends Figura{
     }
 
     public int area(){
-        return Producto.operar(base,altura);
+        Operacion producto = new Producto();
+        return producto.operar(base,altura);
     }
 }

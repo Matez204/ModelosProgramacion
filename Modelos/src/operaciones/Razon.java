@@ -1,29 +1,29 @@
 package operaciones;
 
 public class Razon extends Operacion {
-    public int operar(int dividendo, int divisor){
+    public int operar(int a, int b){
         Resta resta = new Resta();
-        if(divisor == 0){
+        if(b == 0){
             throw new ArithmeticException("No se puede dividir por cero");
         }
 
         boolean signo = true;
-        if (dividendo < 0){
-            dividendo = -dividendo;
+        if (a < 0){
+            a = -a;
             signo = !signo;
         }
-        if (divisor < 0){
-            divisor = -divisor;
+        if (b < 0){
+            b = -b;
             signo = !signo;
         }
 
         int resultado = 0;
-        int residuo = dividendo;
+        int residuo = a;
 
         do {
-            residuo = resta.operar(residuo, divisor);
+            residuo = resta.operar(residuo, b);
             resultado = super.operar(resultado,1);
-        } while (residuo >= divisor);
+        } while (residuo >= b);
 
 
         return signo ? resultado : -resultado;

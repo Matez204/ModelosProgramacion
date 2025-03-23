@@ -1,6 +1,5 @@
 package figuritas;
 
-
 import operaciones.Razon;
 import operaciones.Producto;
 
@@ -12,6 +11,8 @@ public class Triangulo extends Figura{
         this.altura = altura;
     }
     public int area(){
-        return Razon.operar(Producto.operar(base,altura),2);
+        Producto producto = new Producto();
+        Razon razon = new Razon();
+        return razon.operar(producto.operar(base,altura),2);
     }
 }

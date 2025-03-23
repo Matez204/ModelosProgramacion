@@ -1,4 +1,6 @@
 package figuritas;
+
+import operaciones.Operacion;
 import operaciones.Producto;
 
 public class Circulo extends Figura{
@@ -7,7 +9,9 @@ public class Circulo extends Figura{
     public Circulo(int radio){
         this.radio = radio;
     }
+
     public int area(){
-        return Producto.operar(pi,Producto.operar(radio,radio));
+        Operacion producto = new Producto();
+        return producto.operar(pi,producto.operar(radio,radio));
     }
 }
